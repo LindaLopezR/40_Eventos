@@ -1,0 +1,12 @@
+header{
+	background-color: gray;
+}
+textarea, button{
+	margin-top: 3%;
+}
+.boton{
+	border-radius: 100px;
+}
+.error{
+	border: 2px solid #D32F2F !important;
+}
