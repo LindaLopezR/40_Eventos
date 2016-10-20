@@ -16,8 +16,7 @@ function agregarTarea(){
 	// var contenido = document.createTextNode(tareaUsuario);
 	if(tareaUsuario === ""){
 		
-		// tarea.className = "error";
-		alert('vas bien');
+		tarea.className = "error";
 	}
 	// enlace.appendChild(contenido);
 	// enlace.setAttribute("type", "checkbox");
