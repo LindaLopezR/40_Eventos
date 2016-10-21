@@ -1,12 +1,23 @@
 header{
 	background-color: gray;
 }
+.fondoGris{
+	background-color: gainsboro;
+	border: 3px solid white; 
+}
 textarea, button{
 	margin-top: 3%;
+
 }
 .boton{
 	border-radius: 100px;
 }
-.error{
-	border: 2px solid #D32F2F !important;
+li:hover {
+	text-decoration: line-through;
+}
+li {
+	border-top: 2px solid #D32F2F;
+}
+.text-left{
+	float: right;
 }

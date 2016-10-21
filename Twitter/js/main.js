@@ -1,28 +1,26 @@
 var lista = document.getElementById("lista");
-var	tarea = document.getElementById("tarea");
-var	btnNuevaTarea = document.getElementById("botonAgregar");
-// EVENTOS
-tarea.addEventListener("click", comprobar);
-btnNuevaTarea.addEventListener("click", agregarTarea);
-lista.addEventListener("click", eliminarTarea);
-// FUNCIONES
-function comprobar(){
-	
-};
+var	texto = document.getElementById("tarea");
+var	btnTarea = document.getElementById("botonAgregar");
+btnTarea.addEventListener("click", agregarTarea);
 function agregarTarea(){
-	var tareaUsuario = tarea.value;
-	// var nuevaTarea = document.createElement("li");
-	// var enlace = document.createElement("input");
-	// var contenido = document.createTextNode(tareaUsuario);
-	if(tareaUsuario === ""){
-		
-		tarea.className = "error";
+	if(texto.value===""){
+		texto.setAttribute('placeholder', 'Ingresa una tarea válida');
+		return false;
 	}
-	// enlace.appendChild(contenido);
-	// enlace.setAttribute("type", "checkbox");
-	// nuevaTarea.appendChild(enlace);
-	// lista.appendChild(nuevaTarea);
+	var checkbox = document.createElement('input');
+	checkbox.type = "checkbox";
+	var nuevaTarea = document.createElement('li');
+	nuevaTarea.setAttribute('class', 'list-group-item fondoGris');
+	var enlace = document.createTextNode(texto.value);
+	var icono = document.createElement('i');
+	icono.setAttribute('class', 'glyphicon glyphicon-trash text-left');
+	lista.appendChild(nuevaTarea);
+	nuevaTarea.appendChild(checkbox);
+	nuevaTarea.appendChild(enlace);
+	nuevaTarea.appendChild(icono);
+	texto.value = "";
+	nuevaTarea.addEventListener('click', eliminarTarea);
 };
 function eliminarTarea(){
-	
-};
+	this.parentNode.removeChild(this);
+}
